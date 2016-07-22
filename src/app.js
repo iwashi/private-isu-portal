@@ -28,7 +28,6 @@ function normalizeGraph(arrayToDraw) {
     // skip 1st row
     if (i !== 0) {
       for (let k = 1; k < row.length; k++) {
-        // arrayToDraw[i - 1][k];
         if (row[k] === 0) {
           row[k] = arrayToDraw[i - 1][k];
         }
