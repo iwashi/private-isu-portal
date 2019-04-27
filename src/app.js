@@ -100,8 +100,6 @@ async function draw() {
         arrayToDrawBar.push([teamName, arrayToDraw[arrayToDraw.length - 1][i + 1]]);
       });
 
-      arrayToDrawBar.unshift(['チーム名', 'スコア']);
-
       arrayToDrawBar.sort((a, b) => {
         if (a[1] < b[1]) {
           return 1;
@@ -111,6 +109,8 @@ async function draw() {
           return 0;
         }
       });
+
+      arrayToDrawBar.unshift(['チーム名', 'スコア']);
 
       const dataBar = new google.visualization.arrayToDataTable(arrayToDrawBar);
       const barChart = new google.visualization.BarChart(document.getElementById('barChart'));
